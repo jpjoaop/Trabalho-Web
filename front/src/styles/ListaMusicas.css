@@ -1,0 +1,89 @@
+h2, p, li{
+    text-align: center;
+}
+
+
+#searchbar {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border: 1px transparent;
+    border-radius: 10px;
+    color: #535353;
+    font-size: large;
+}
+#erro1 {
+    color: red;
+    border: 0.4px dotted #535353;
+    border-radius: 10px;
+    box-sizing: content-box;
+}
+
+.musicinfo {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px dotted black;
+    margin-top: 1.5%;
+}
+#capa {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+li {
+    color: #121212;
+    font-weight: bolder;
+    font-size: medium;
+    margin-right: 20%;
+}
+
+audio {
+    height: 25px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #1db954;
+  }
+  
+  audio::-webkit-media-controls-timeline {
+    background-color: #1db935;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+.engicon {
+    max-width: 15px;
+    max-height: 15px;
+}
+
+.eng{
+    background-color: transparent;
+    border: 1px solid black;
+
+}
+
+#principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#plusicon {
+    max-width:15px;
+    max-height: 15px;
+}
+
+#plus {
+    margin-left: 15%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 50%;
+}

@@ -1,0 +1,91 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3%;
+}
+
+label {
+    font-weight:bolder;
+    color: #535353;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+
+input{
+    display: block;
+    width: 50%;
+    font-size: 1.5rem;
+    line-height: 1.43;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-top: 5%;
+    transition: border-color 0.25s;
+    width: 20%;
+    color:#535353;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration:underline dotted;
+}
+
+#enviarbotao {
+    max-width: 25px;
+    max-height: 25px;
+    margin-right: 10px;
+}
+
+#novouser {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#msg {
+    margin-top: 20px;
+    font-size: large;
+    font-weight: bolder;
+    border: 1px dotted black;
+    color: black;
+  }
+
+  h3 {
+    color: red;
+    border: 1px dotted black;
+  }
+
+  #btnlogin {
+    width: 130px;
+    text-decoration: underline white;
+    border: 1px transparent;
+    border-radius: 10px;
+  }

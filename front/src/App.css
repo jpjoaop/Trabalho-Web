@@ -1,0 +1,49 @@
+:root {
+  color: #1db954;
+	font: 14px/19px  "Helvetica", "Arial", sans-serif;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo {
+  background-color:#121212;
+  padding: 1rem;
+  position: sticky;
+  margin-top: 0%;
+}
+
+.rodape {
+  background-color:#121212;
+  margin-top: 10%;
+  text-align: center;
+  font: 12px;
+}
+
+#logospotify {
+  max-width: 150px;
+  max-height: 150px;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  align-items: flex-start;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  
+}
+
+body{
+  background-color: #b3b3b3;
+}
+
