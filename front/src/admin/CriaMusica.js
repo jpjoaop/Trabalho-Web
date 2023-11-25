@@ -1,5 +1,6 @@
 // CriaMusica.js
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Criacao.css'
 import ok from '../images/ok.png'
 
@@ -90,9 +91,16 @@ const CriaMusica = () => {
         />
 
         <button type="submit" className='salva'>
-        <img src={ok} alt='botão de criar' className='salva-icon'></img>
-        Criar Música
+          <img src={ok} alt='botão de criar' className='salva-icon'></img>
+          Criar Música
         </button>
+
+
+        <Link to={'/lista-musicas-adm'}>
+        <button type="submit" className='salva'>
+        Voltar
+        </button>
+        </Link>
       </form>
     </div>
   );
