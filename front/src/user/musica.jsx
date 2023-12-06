@@ -9,7 +9,6 @@ const Musica = ({ musica }) => {
   return (
     <div className="detalhes-musica">
       <h2>{`${musica.nome} - ${musica.artista}`}</h2>
-      {/* Adicione aqui mais detalhes da música, se necessário */}
     </div>
   );
 };

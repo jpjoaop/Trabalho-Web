@@ -38,7 +38,7 @@ const ListaMusicasAdm = () => {
 
   return (
     <div className="lista-musicas">
-      <h2>Todas as Músicas (Admin)</h2>
+      <h2>Todas as Músicas</h2>
       <div id="principal">
         <input
           type="text"
