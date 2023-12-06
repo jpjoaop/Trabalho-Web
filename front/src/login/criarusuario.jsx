@@ -13,7 +13,7 @@ const CriarUsuario = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Adicionando a variável 'tipo' e configurando como 'usuario' por padrão
+    // PARA CRIAR UM ADMINISTRADOR, DEVE SER EDITADO AQUI. 'usuario' ou 'admin'
     const tipo = 'usuario';
 
     // Construir o objeto de usuário

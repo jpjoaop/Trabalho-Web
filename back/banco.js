@@ -8,7 +8,7 @@ const dbPath = path.join(__dirname, '..', 'bd', 'banco.db');
 const db = new sqlite3.Database(dbPath);
 
 // Criação da tabela 'usuarios'
-const createTableQuery = `
+const tabeladados = `
   CREATE TABLE IF NOT EXISTS usuarios (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
@@ -18,7 +18,7 @@ const createTableQuery = `
   );
 `;
 
-const createTableQuery2 = `
+const tabelamusica = `
 CREATE TABLE IF NOT EXISTS musicas (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS musicas (
 `;
 
 // Executar a consulta de criação da tabela
-db.run(createTableQuery, (err) => {
+db.run(tabeladados, (err) => {
   if (err) {
     console.error('Erro ao criar a tabela:', err.message);
   } else {
@@ -38,7 +38,7 @@ db.run(createTableQuery, (err) => {
   }
 });
 
-db.run(createTableQuery2, (err) => {
+db.run(tabelamusica, (err) => {
     if (err) {
       console.error('Erro ao criar a tabela:', err.message);
     } else {
