@@ -15,8 +15,14 @@ const EditarMusica = () => {
 
   useEffect(() => {
     const carregarMusica = async () => {
+      const token = localStorage.getItem('token');
       try {
-        const response = await fetch(`http://localhost:3001/musicas/${id}`);
+        const response = await fetch(`http://localhost:3001/musicas/${id}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+          },
+        });
         if (response.ok) {
           const data = await response.json();
           setMusica(data);
