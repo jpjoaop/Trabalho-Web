@@ -1,4 +1,3 @@
-// ListaMusicasAdm.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/ListaMusicas.css';
@@ -14,7 +13,15 @@ const ListaMusicasAdm = () => {
   useEffect(() => {
     const carregarMusicas = async () => {
       try {
-        const response = await fetch('http://localhost:3001/musicas');
+        const token = localStorage.getItem('token');
+        const response = await fetch('http://localhost:3001/musicas', {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+
         if (response.ok) {
           const data = await response.json();
           setMusicas(data);

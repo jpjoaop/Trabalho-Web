@@ -21,11 +21,16 @@ const CriaMusica = () => {
     formData.append('album', album);
     formData.append('dataLancamento', dataLancamento);
     formData.append('audio', audio);
-
+    const token = localStorage.getItem('token');
     try {
+      
       // Enviar os dados para o backend
       const response = await fetch('http://localhost:3001/criar-musica', {
         method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          
+        },
         body: formData,
       });
 

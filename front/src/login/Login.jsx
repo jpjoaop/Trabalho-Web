@@ -25,13 +25,16 @@ const Login = () => {
       });
 
       if (response.ok) {
-        const { tipo } = await response.json();
-
+        const { tipo, token } = await response.json();
+  
+        // Armazenar o token no localStorage
+        localStorage.setItem('token', token);
+  
         // Redireciona com base no tipo de usuário
         if (tipo === 'admin') {
-          navigate('/lista-musicas-adm'); // Use navigate ao invés de history.push
+          navigate('/lista-musicas-adm');
         } else {
-          navigate('/lista-musicas'); // Use navigate ao invés de history.push
+          navigate('/lista-musicas');
         }
       } else {
         if (response.status === 401) {

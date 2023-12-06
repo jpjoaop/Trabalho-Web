@@ -37,10 +37,12 @@ const EditarMusica = () => {
 
   const handleEditar = async () => {
     try {
+      const token = localStorage.getItem('token')
       const response = await fetch(`http://localhost:3001/musicas/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`, 
         },
         body: JSON.stringify({
           nome,
@@ -64,8 +66,12 @@ const EditarMusica = () => {
 
   const handleRemover = async () => {
     try {
+      const token = localStorage.getItem('token');
       const response = await fetch(`http://localhost:3001/musicas/${id}`, {
         method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`, // Adicionar o cabeçalho de autorização
+        },
       });
 
       if (response.ok) {
