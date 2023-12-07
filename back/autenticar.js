@@ -35,7 +35,7 @@ function verificarTokenValido(token) {
   }
   
 
-function verificarAutenticacao(req, res, next) {
+  function verificarAutenticacao(req, res, next) {
     const authHeader = req.headers['authorization'];
     console.log('Authorization Header:', authHeader);
   
@@ -45,7 +45,11 @@ function verificarAutenticacao(req, res, next) {
     }
   
     const token = authHeader.split(' ')[1];
-    console.log('Token recebido:', token);
+  
+    if (!token) {
+      console.error('Token não fornecido!');
+      return res.status(401).json({ error: 'Token não fornecido' });
+    }
   
     const tokenParts = token.split('-');
     if (tokenParts.length < 3) {
@@ -56,14 +60,7 @@ function verificarAutenticacao(req, res, next) {
     const tipoToken = tokenParts[1];
     console.log('Tipo do Token:', tipoToken);
     console.log('Rota acessada:', req.path);
-  
-    const rotaRequerAdmin = ['/criar-musica', '/editar-musica'].includes(req.path);
-    console.log('Rota requer admin:', rotaRequerAdmin);
-  
-    if (rotaRequerAdmin && tipoToken !== 'admin') {
-      console.error('Acesso negado para usuário não-admin!');
-      return res.status(403).json({ error: 'Acesso negado' });
-    }
+
   
     if (!verificarTokenValido(token)) {
       console.error('Token inválido ou expirado!');
@@ -72,7 +69,8 @@ function verificarAutenticacao(req, res, next) {
   
     console.log('Token verificado com sucesso.');
     next();
-}
+  }
+  
   
   
 

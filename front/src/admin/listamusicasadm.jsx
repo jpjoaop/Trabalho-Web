@@ -72,7 +72,7 @@ const ListaMusicasAdm = () => {
                 <br></br>
                 <audio controls>
                   <source
-                    src={`http://localhost:3001/musicas/${musica.endereco_audio.split('\\').pop()}`}
+                    src={`http://localhost:3001/musicas/${musica.endereco_audio.split('\\').pop()}`} //OBS: Alterar aqui.
                     type="audio/mp3"
                   />
                   Seu navegador não suporta o elemento de áudio.
