@@ -75,7 +75,7 @@ const ListaMusicasAdm = () => {
                     src={`http://localhost:3001/musicas/${musica.endereco_audio.split('\\').pop()}`} //OBS: Alterar aqui.
                     type="audio/mp3"
                   />
-                  Seu navegador não suporta o elemento de áudio.
+                  Não é possível reproduzir áudio aqui..
                 </audio>
               </li>
               <Link to={`/editar-musica/${musica.id}`}>
@@ -99,7 +99,7 @@ const ListaMusicasAdm = () => {
                     src={`http://localhost:3001/musicas/${musica.endereco_audio.split('\\').pop()}`}
                     type="audio/mp3"
                   />
-                  Seu navegador não suporta o elemento de áudio.
+                  Não é possível reproduzir áudio aqui.
                 </audio>
               </li>
               <Link to={`/editar-musica/${musica.id}`}>
